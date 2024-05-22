@@ -9,7 +9,7 @@ import {
   Search,
   SourceControl,
 } from "@/icons";
-import { App, Leetcode, MDXEntry } from "@/lib/mdx";
+import { App, MDXEntry } from "@/lib/mdx";
 import {
   Menu,
   Section,

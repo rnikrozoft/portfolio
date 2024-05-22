@@ -35,6 +35,5 @@ export const remarkPlugins = [
   [
     unifiedConditional,
     [new RegExp(`^${escapeStringRegexp(path.resolve('src/app/apps'))}`), [[remarkMDXLayout, '@/app/apps/wrapper', 'appData']]],
-    [new RegExp(`^${escapeStringRegexp(path.resolve('src/app/leetcode'))}`), [[remarkMDXLayout, '@/app/leetcode/wrapper', 'leetData']]],
   ],
 ];

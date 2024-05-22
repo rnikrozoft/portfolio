@@ -1,6 +1,6 @@
 'use client';
 import { Ellipsis } from '@/icons';
-import { App, Leetcode, MDXEntry } from '@/lib/mdx';
+import { App, MDXEntry } from '@/lib/mdx';
 import Header from '../Header';
 import Editors from './Editors';
 import Outline from './Outline';

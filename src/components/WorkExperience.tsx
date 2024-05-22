@@ -26,7 +26,12 @@ const experience = [
       "Developed web-application tool for organization team used.",
       "Using HTML, CSS, Bootstrap, PHP, Codeigniter, WordPress, MySQL, MongoDB, and jQuery.",
     ],
-    image: {},
+    image: {
+      url: "/no-image.png",
+      height: 96,
+      width: 96,
+      className: "rounded-none",
+    },
   },
   {
     title: "Freelancer | Full Stack Developer.",
@@ -36,7 +41,12 @@ const experience = [
       "Developed various web-application systems according to customer requests.",
       "Using HTML, CSS, Bootstrap, PHP, Laravel, WordPress, MySQL, and jQuery.",
     ],
-    image: {},
+    image: {
+      url: "/no-image.png",
+      height: 96,
+      width: 96,
+      className: "rounded-none",
+    },
   },
 ];
 
