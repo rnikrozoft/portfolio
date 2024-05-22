@@ -1,8 +1,14 @@
-'use client';
-import { ExpandArrowLink, GlowCard } from '@/components';
-import clsx from 'clsx';
-import Image, { StaticImageData } from 'next/image';
-import { impulseux, leenithBorges, leenithIos, loteriaMonarca, realtorSimplified, sierraEcomaderas, template1 } from '../../public/projects/';
+"use client";
+import { ExpandArrowLink, GlowCard } from "@/components";
+import clsx from "clsx";
+import Image, { StaticImageData } from "next/image";
+import {
+  greatzor,
+  cannabitia,
+  purrsafeclub,
+  pakapowm,
+  zabbworld,
+} from "../../public/projects/";
 
 interface Project {
   href: string;
@@ -16,53 +22,41 @@ interface Project {
 
 const projects: Project[] = [
   {
-    href: '/apps/realtor-simplified',
-    name: 'Realtor Simplified',
+    href: "/apps/greatzor",
+    name: "Greatzor",
     full: true,
-    description: ' saas platform that enables realtors to deploy a professional website in minutes.',
-    image: { src: realtorSimplified },
+    description:
+      " A 2D side-scrolling fighting game where you can choose characters and use up to 6 different skills.",
+    image: { src: greatzor },
   },
   {
-    href: '/apps/loteria-monarca',
-    name: 'Loteria Monarca',
+    href: "/apps/cannabitia",
+    name: "Cannabitia",
     full: true,
-    description: ' online platform to register and play Loteria Mexicana.',
-    image: { src: loteriaMonarca },
+    description:
+      " An online cannabis farming game where you can meet other players, visit gardens, and build good relationships.",
+    image: { src: cannabitia },
   },
   {
-    href: '/apps/realtor-template-1',
-    name: 'Realtor Template',
-    full: false,
-    description: ' deployable template on the realtor simplified platform.',
-    image: { src: template1 },
-  },
-  {
-    href: '/apps/sierra-ecomaderas',
-    name: 'Sierra Ecomanderas',
-    full: false,
-    description: ' static website for a wood selling bussiness.',
-    image: { src: sierraEcomaderas },
-  },
-  {
-    href: '/apps/leenith-borges',
-    name: 'Leenith',
+    href: "/apps/purrsafeclub",
+    name: "Purrsafeclub",
     full: true,
-    description: ' e-commerce website to manage, and sell courses online.',
-    image: { src: leenithBorges },
+    description: " A game play-to-earn with Polygon Blockchain.",
+    image: { src: purrsafeclub },
   },
   {
-    href: '/apps/leenith-borges',
-    name: 'Leenith IOS',
-    full: false,
-    description: ' ios app to access and buy courses.',
-    image: { src: leenithIos },
+    href: "/apps/pakapowm",
+    name: "Pakapow Mobile",
+    full: true,
+    description: " The casual, role-playing, strategy party game inspired by Dokapon.",
+    image: { src: pakapowm },
   },
   {
-    href: '/apps/impulseux',
-    name: 'ImpulseUX',
-    full: false,
-    description: ' static website for design and development agency.',
-    image: { src: impulseux },
+    href: "/apps/zabbworld",
+    name: "Zabbworld",
+    full: true,
+    description: " A pre-register website connected to Firebase to support game pre-registration, also featuring an in-site top-up system using the Omise library.",
+    image: { src: zabbworld },
   },
 ];
 
@@ -73,21 +67,43 @@ export default function MyWork() {
         {projects.map((project) => (
           <GlowCard
             key={project.name}
-            className={clsx('hover:shadow-my_work_yellow/90', project.full ? 'h-[60vh] @2xl:h-[50vh] @3xl:col-span-2' : 'h-[60vh] @3xl:col-span-1')}
+            className={clsx(
+              "hover:shadow-my_work_yellow/90",
+              project.full
+                ? "h-[60vh] @2xl:h-[50vh] @3xl:col-span-2"
+                : "h-[60vh] @3xl:col-span-1"
+            )}
             glowClassName="from-[#ffdc8b] to-[#ffdc8b]"
           >
-            <div className={clsx('flex-col justify-between h-full', project.full && '@2xl:flex')}>
-              <h3 className={clsx('text-xl @2xl:text-3xl text-white dark:text-white/90', project.full && '@4xl:w-[40%]')}>
-                <span className="text-2xl @2xl:text-4xl text-my_work_yellow">{project.name}</span>
+            <div
+              className={clsx(
+                "flex-col justify-between h-full",
+                project.full && "@2xl:flex"
+              )}
+            >
+              <h3
+                className={clsx(
+                  "text-xl @2xl:text-3xl text-white dark:text-white/90",
+                  project.full && "@4xl:w-[40%]"
+                )}
+              >
+                <span className="text-2xl @2xl:text-4xl text-my_work_yellow">
+                  {project.name}
+                </span>
                 {project.description}
               </h3>
-              <ExpandArrowLink href={project.href} className="before:bg-my_work_yellow " />
+              <ExpandArrowLink
+                href={project.href}
+                className="before:bg-my_work_yellow "
+              />
             </div>
             <Image
               placeholder="blur"
               className={clsx(
-                'z-10 my-work-img-shadow absolute w-full',
-                project.full ? '@md:w-[80%] @xl:w-[70%] @2xl:w-[55%] @md:rounded-tl-md bottom-0 right-0' : 'bottom-0 @xl:right-0 @xl:w-[70%] @3xl:w-full'
+                "z-10 my-work-img-shadow absolute w-full",
+                project.full
+                  ? "@md:w-[80%] @xl:w-[70%] @2xl:w-[55%] @md:rounded-tl-md bottom-0 right-0"
+                  : "bottom-0 @xl:right-0 @xl:w-[70%] @3xl:w-full"
               )}
               src={project.image.src}
               alt=""

@@ -70,8 +70,12 @@ import UntoggledSidebar from './untoggled-sidebar';
 import VSCode from './vscode';
 import Warning from './warning';
 import WorkExperience from './work-experience';
+import HTML from './html';
+import Go from './go';
 
 export {
+  Go,
+  HTML,
   AboutMe,
   Accounts,
   App,

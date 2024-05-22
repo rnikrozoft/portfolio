@@ -1,10 +1,10 @@
 'use client';
-import { App, MDXEntry, Leetcode } from '@/lib/mdx';
+import { App, MDXEntry } from '@/lib/mdx';
 import { expandableSlice, sectionSlice, tabsSlice, useDispatch } from '@/lib/redux';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 
-export default function NavigationChange({ allPaths }: { allPaths: MDXEntry<App | Leetcode>[] }) {
+export default function NavigationChange({ allPaths }: { allPaths: MDXEntry<App>[] }) {
   const pathname = usePathname();
   const intialLoad = useRef(true);
   const dispatch = useDispatch();

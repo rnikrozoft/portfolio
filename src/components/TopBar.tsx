@@ -9,7 +9,7 @@ export default function TopBar() {
   return (
     <div className="flex justify-between text-gray-500 border-b-2 border-dark_border items-center">
       <MenuBar />
-      <h1 className="text-sm py-3 pointer-events-none select-none hidden sm:block">Alejandro Gomez - Portfolio</h1>
+      <h1 className="text-sm py-3 pointer-events-none select-none hidden sm:block">Jirawat Charoonnet - Portfolio</h1>
       <div className="flex">
         <ToggleButtons menuExpanded={menuExpanded} />
         <ControlButtons />
@@ -34,7 +34,7 @@ function MenuBar() {
   };
 
   return (
-    <div className="p-1 flex">
+    <div className="p-1 flex pl-4">
       <div className="my-auto">
         <VSCode />
       </div>

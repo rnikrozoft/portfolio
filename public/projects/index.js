@@ -1,9 +1,8 @@
-import impulseux from './impulseux.png';
-import leenithBorges from './leenith-borges.png';
-import leenithIos from './leenith-ios.png';
-import loteriaMonarca from './loteria-monarca.png';
-import realtorSimplified from './realtor-simplified.png';
-import sierraEcomaderas from './sierra-ecomaderas.png';
-import template1 from './realtor-template-1.png';
+import pakapowm from './pakapowm.png';
+import purrsafeclub from './purrsafeclub.png';
+import greatzor from './greatzor.png';
+import cannabitia from './cannabitia.png'
+import zabbworld from './zabbworld.png'
 
-export { impulseux, leenithBorges, leenithIos, loteriaMonarca, realtorSimplified, sierraEcomaderas, template1 };
+
+export { pakapowm, purrsafeclub, greatzor, cannabitia, zabbworld };

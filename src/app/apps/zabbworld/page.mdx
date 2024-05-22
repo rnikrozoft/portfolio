@@ -1,0 +1,90 @@
+import { Border, Button, Container, FadeIn, FadeInStagger, Section } from '@/components';
+import Image from 'next/image';
+import { zabbworld } from '../../../../public/projects'
+
+export const appData = {
+  release: 'released',
+  youtube: 'https://zabbworld.varisoft.com',
+  title: 'Zabbworld',
+  description: 'Pre-Register Website',
+  image: zabbworld,
+  url: 'https://zabbworld.varisoft.com',
+  pathname: '/apps/zabbworld',
+  framework: 'html',
+};
+
+export const sections = [
+  { index: 0, title: 'About', id: 'about' },
+  { index: 1, title: 'Description', id: 'challenge' },
+  { index: 2, title: 'Technologies', id: 'technologies' },
+];
+
+export const metadata = {
+  title: `${appData.title}`,
+  description: appData.description,
+};
+
+export const technologies = [
+  {
+    name: 'HTML',
+    image: '/logos/html5-logo.png',
+  },
+  {
+    name: 'CSS',
+    image: '/logos/css-logo.png',
+  },
+  {
+    name: 'Bootstrap',
+    image: '/logos/bootstrap-logo.svg',
+  },
+  {
+    name: 'Jquery',
+    image: '/logos/jquery-logo.webp',
+  },
+  {
+    name: 'Firebase',
+    image: '/logos/firebase-logo.png',
+  },
+];
+
+<Container>
+
+<Border className="my-8" />
+
+  <Section id="challenge">
+    ## Description
+
+    A pre-register website connected to Firebase to support game pre-registration, also featuring an in-site top-up system using the Omise library.
+
+  </Section>
+
+<Border className="my-8" />
+
+<Section id="technologies">
+
+## Technologies
+
+<FadeInStagger className="flex gap-4 mt-6 flex-wrap" faster once>
+  {technologies.map((tech) => (
+    <FadeIn key={tech.name}>
+      <div className="mt-auto">
+        <Image
+          src={tech.image}
+          className="object-contain rounded-md m-auto"
+          alt=""
+          height={64}
+          width={64}
+          style={{
+            width: 64,
+            height: 64,
+          }}
+        />
+        <h4 className="text-sm font-semibold tracking-tight text-[#525df3] text-center bg-white rounded-full w-min px-2 m-2 mx-auto">{tech.name}</h4>
+      </div>
+    </FadeIn>
+  ))}
+</FadeInStagger>
+
+</Section>
+
+</Container>

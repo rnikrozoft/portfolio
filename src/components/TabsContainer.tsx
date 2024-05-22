@@ -34,12 +34,12 @@ export default function TabsContainer() {
   if (!tabs.length) return null;
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className="border-b-2 bg-dark_bg border-dark_border sticky top-0 z-20 flex text-gray-500 overflow-y-hidden slim flex-none">
+      <div className="border-b-2 bg-black border-dark_border sticky top-0 z-20 flex text-gray-500 overflow-y-hidden slim flex-none">
         {tabs.map((tab) => (
           <Tab key={tab.href} {...tab} active={tab.href === currentTab} />
         ))}
         <DropEnd />
-        <div className="text-gray-500 flex items-center flex-none sticky right-0 bottom-0 top-0 bg-dark_bg px-4">
+        <div className="text-gray-500 flex items-center flex-none sticky right-0 bottom-0 top-0 bg-black px-4">
           <button className="hover:bg-gray-300 p-1 rounded-md">
             <GitCompare />
           </button>

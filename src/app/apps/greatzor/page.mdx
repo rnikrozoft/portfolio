@@ -1,0 +1,83 @@
+import { Border, Button, Container, FadeIn, FadeInStagger, Section } from '@/components';
+import Image from 'next/image';
+import { greatzor } from '../../../../public/projects';
+
+export const appData = {
+  release: 'unreleased',
+  youtube: 'https://www.youtube.com/watch?v=YdVbtWC4fd4',
+  title: 'Greatzor',
+  description: 'A 2D side-scrolling fighting game where you can choose characters and use up to 6 different skills.',
+  image: greatzor,
+  url: 'https://greatzor-e14e0.web.app/',
+  pathname: '/apps/greatzor',
+  framework: 'go',
+};
+
+export const sections = [
+  { index: 0, title: 'About', id: 'about' },
+  { index: 1, title: 'Description', id: 'challenge' },
+  { index: 2, title: 'Technologies', id: 'technologies' },
+];
+
+export const metadata = {
+  title: `${appData.title}`,
+  description: appData.description,
+};
+
+export const technologies = [
+  {
+    name: 'Golang',
+    image: '/logos/golang-logo.png',
+  },
+  {
+    name: 'Postgres',
+    image: '/logos/postgres-logo.png',
+  },
+  {
+    name: 'RestAPI',
+    image: '/logos/restapi.png',
+  },
+];
+
+<Container>
+
+<Border className="my-8" />
+
+  <Section id="challenge">
+    ## Description
+
+    the 2D side scrolling fighting game has an identity
+    verification feature, hero selection feature, skill system and many other features.
+
+  </Section>
+
+<Border className="my-8" />
+
+<Section id="technologies">
+
+## Technologies
+
+<FadeInStagger className="flex gap-4 mt-6 flex-wrap" faster once>
+  {technologies.map((tech) => (
+    <FadeIn key={tech.name}>
+      <div className="mt-auto">
+        <Image
+          src={tech.image}
+          className="object-contain rounded-md m-auto"
+          alt=""
+          height={64}
+          width={64}
+          style={{
+            width: 64,
+            height: 64,
+          }}
+        />
+        <h4 className="text-sm font-semibold tracking-tight text-[#525df3] text-center bg-white rounded-full w-min px-2 m-2 mx-auto">{tech.name}</h4>
+      </div>
+    </FadeIn>
+  ))}
+</FadeInStagger>
+
+</Section>
+
+</Container>
