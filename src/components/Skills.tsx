@@ -32,7 +32,7 @@ const skillsLogos = [
   { name: "RestAPI", image: "/logos/restapi.png" },
   { name: "Websocket", image: "/logos/websocket.png" },
   { name: "Fiber", image: "/logos/go-fiber.svg" },
-  { name: "Echo", image: "/logos/go-echo.svg" },
+  { name: "Echo", image: "/logos/go-echo.png" },
 ];
 
 export default function Skills() {
